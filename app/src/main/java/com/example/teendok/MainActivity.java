@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tasksRecyclerView = (RecyclerView) findViewById(R.id.tasksRecyclerView);
-        //tasksRecyclerView.setHasFixedSize(true);
+        tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
+        tasksRecyclerView.setHasFixedSize(true);
         tasksLayoutManager = new LinearLayoutManager(this);
         tasksRecyclerView.setLayoutManager(tasksLayoutManager);
 
