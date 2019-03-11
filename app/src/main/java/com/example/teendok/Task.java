@@ -7,11 +7,14 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.PrimaryKey;
 import android.arch.persistence.room.Query;
+import android.support.annotation.NonNull;
 
 import java.util.List;
 
-@Entity
-public class DatabaseTask {
+@Entity(tableName = "word_table")
+public class Task {
+    private String mWord;
+
     @PrimaryKey
     public int id;
 
@@ -20,5 +23,14 @@ public class DatabaseTask {
 
     @ColumnInfo(name = "date")
     public long date;
+
+    public Task(@NonNull String word) {
+        this.mWord = word;
+    }
+
+    @NonNull
+    public String getWord() {
+        return this.mWord;
+    }
 }
 
