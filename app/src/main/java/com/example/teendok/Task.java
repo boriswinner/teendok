@@ -15,7 +15,7 @@ import java.util.List;
 public class Task {
     private String mWord;
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int id;
 
     @ColumnInfo(name = "task")
